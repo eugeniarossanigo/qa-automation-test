@@ -1,24 +1,34 @@
-describe('Get wikipedia cover', () => {
-    beforeAll('open browser', () => {
-        return browser.url('https://google.com');
-    });
-    
-    it('To wikipedia', () => {
-        let inputBox = $('#gLFyf gsfi');
-        expect(inputBox).toExist();
-        inputBox.setValue('wikipedia');
-        //Enter;
-        let inputUrl = $('.LC20lb DKV0Md=Wikipedia');  // como selecciono la primera???
-        //ver $(selector).getText()
-        inputUrl.click();
-        browser.pause(2000);
-
-        //expect(browser.getTitle()).toMatch('https://es.wikipedia.org/wiki/Wikipedia:Portada');
-        expect(browser).toHaveUrl('https://es.wikipedia.org/wiki/Wikipedia:Portada');
-        expect(browser).toHaveTitleContaining('Wikipedia');
-    });
+describe('Test', () => {
+    it('open browser', () => {
+        browser.url('https://google.com');
+        browser.pause(4000);
+    })
 })
 
+
+// describe('Get wikipedia cover', () => {
+//     beforeAll('open browser', () => {
+//         return browser.url('https://google.com');
+//     });
+    
+//     it('To wikipedia', () => {
+//         let inputBox = $('#gLFyf gsfi');
+//         expect(inputBox).toExist();
+//         inputBox.setValue('wikipedia');
+//         browser.keys('Enter');
+//         let inputUrl = $('.LC20lb DKV0Md=Wikipedia');  // como selecciono la primera??? Ver si funciona
+//         //ver $(selector).getText()
+//         inputUrl.click();
+//         browser.pause(4000);
+
+//         //expect(browser.getTitle()).toMatch('https://es.wikipedia.org/wiki/Wikipedia:Portada');
+//         expect(browser).toHaveUrl('https://es.wikipedia.org/wiki/Wikipedia:Portada');
+//         expect(browser).toHaveTitleContaining('Wikipedia');
+//     });
+// })
+
+
+//EJEMPLO 
 // describe('Google', () => {
 //     it('Title', () => {
 //         browser.url('https://wikipedia.org');
